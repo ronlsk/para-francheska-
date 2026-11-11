@@ -1,0 +1,1063 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Francheska 🩵</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #10090d;
+  --bg2: #1b0c14;
+  --pink: #e9a5bd;
+  --rose: #bd6488;
+  --white: #fff3f7;
+  --muted: #c9aab8;
+  --border: rgba(233,165,189,.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, #381522 0%, #1b0c14 35%, #10090d 75%);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: auto;
+  padding: 55px 20px 80px;
+}
+
+section {
+  margin-bottom: 65px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.heart {
+  color: #ff9fc4;
+  font-size: 48px;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+  filter: drop-shadow(0 0 15px #ff5b9b);
+}
+
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  15% { transform: scale(1.18); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.12); }
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 9vw, 76px);
+  font-weight: 600;
+  color: #f5c5d8;
+  margin: 12px 0;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #f5dce7;
+  text-align: center;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--pink);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,.035);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 27px 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0,0,0,.16);
+}
+
+.counter {
+  text-align: center;
+}
+
+.counter-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.time-box {
+  background: rgba(189,100,136,.12);
+  border: 1px solid rgba(233,165,189,.15);
+  border-radius: 14px;
+  padding: 17px 5px;
+}
+
+.time-box strong {
+  display: block;
+  font-size: clamp(22px, 5vw, 35px);
+  font-weight: 500;
+  color: #ffd5e5;
+}
+
+.time-box span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.music {
+  text-align: center;
+  margin-top: 22px;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.music-btn, .main-btn {
+  background: linear-gradient(135deg, #bd6488, #8d365c);
+  border: 1px solid #e9a5bd66;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 50px;
+  font-size: 13px;
+  letter-spacing: .4px;
+  box-shadow: 0 6px 25px #bd648833;
+}
+
+.music-btn:hover, .main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px #bd648855;
+}
+
+.music-status {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* FOTOS */
+
+.photos {
+  display: grid;
+  gap: 13px;
+}
+
+.photo-main {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 35px #0005;
+}
+
+.photo-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.photo-bottom img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+/* CORAZONES CON MENSAJES */
+
+.messages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.message-heart {
+  background: rgba(189,100,136,.09);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  color: #ffc5dc;
+  padding: 20px 8px;
+  font-size: 28px;
+}
+
+.message-heart:hover {
+  background: rgba(189,100,136,.23);
+  transform: translateY(-4px);
+}
+
+.message-heart span {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 7px;
+}
+
+.message-result {
+  min-height: 65px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #ffd8e7;
+  margin-top: 22px;
+  line-height: 1.4;
+}
+
+/* CARTA SECRETA */
+
+.envelope-area {
+  text-align: center;
+}
+
+.envelope {
+  position: relative;
+  width: min(320px, 90%);
+  height: 190px;
+  margin: 20px auto;
+  background: #8f3b60;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 15px 40px #0004;
+  perspective: 900px;
+}
+
+.envelope::before {
+  content: "♡";
+  position: absolute;
+  z-index: 4;
+  font-size: 35px;
+  color: #ffe0ec;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.envelope-flap {
+  position: absolute;
+  inset: 0;
+  background: #b65d83;
+  clip-path: polygon(0 0, 100% 0, 50% 60%);
+  transform-origin: top;
+  transition: transform .8s;
+  z-index: 3;
+}
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+.envelope-text {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.letter {
+  display: none;
+  background: linear-gradient(145deg, #fff0f6, #f5dce8);
+  color: #55243c;
+  border-radius: 20px;
+  padding: 30px 24px;
+  margin-top: 28px;
+  text-align: left;
+  box-shadow: 0 15px 45px #0004;
+  animation: letterAppear .7s ease;
+}
+
+.letter.show {
+  display: block;
+}
+
+@keyframes letterAppear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.letter h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  margin-bottom: 17px;
+  color: #8e3e63;
+}
+
+.letter p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
+.letter-sign {
+  text-align: right;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  margin-top: 20px;
+  color: #8e3e63;
+}
+
+/* DEDICATORIA */
+
+.dedication {
+  text-align: center;
+  padding: 35px 22px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.dedication p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  line-height: 1.6;
+  color: #f5dce7;
+}
+
+.dedication .signature {
+  margin-top: 20px;
+  font-size: 21px;
+  color: var(--pink);
+}
+
+/* PREGUNTA FINAL */
+
+.final-question {
+  text-align: center;
+  margin-top: 55px;
+}
+
+.final-question h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 35px;
+  font-weight: 500;
+  color: #f5c5d8;
+  margin-bottom: 18px;
+}
+
+.final-question p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.ask-btn {
+  margin-top: 5px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(8,3,7,.88);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.modal.show {
+  display: flex;
+  animation: fadeIn .35s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-card {
+  width: min(500px, 100%);
+  background: linear-gradient(145deg, #29111e, #170a12);
+  border: 1px solid rgba(233,165,189,.3);
+  border-radius: 25px;
+  padding: 35px 23px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 80px #0008;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #d9a9be;
+  font-size: 25px;
+  padding: 5px 10px;
+}
+
+.modal-heart {
+  font-size: 42px;
+  color: #ff9fc4;
+  animation: heartbeat 1.5s infinite;
+  margin-bottom: 15px;
+}
+
+.question-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  line-height: 1.35;
+  color: #ffe1ed;
+  margin-bottom: 28px;
+}
+
+.buttons-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 95px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.answer-btn {
+  border-radius: 50px;
+  border: 1px solid #ffffff22;
+  padding: 13px 29px;
+  font-size: 14px;
+  min-width: 105px;
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #e79ab8, #b64e7d);
+  color: white;
+  box-shadow: 0 6px 25px #bd648844;
+}
+
+.no-btn {
+  background: #35202b;
+  color: #e8c2d3;
+  border-color: #74445e;
+  transform-origin: center;
+}
+
+.no-btn:hover {
+  background: #48283b;
+}
+
+.result-message {
+  display: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  line-height: 1.4;
+  color: #ffd8e7;
+  animation: resultAppear .7s ease;
+}
+
+.result-message.show {
+  display: block;
+}
+
+@keyframes resultAppear {
+  from { opacity: 0; transform: scale(.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.result-message .big-heart {
+  display: block;
+  font-size: 55px;
+  margin-bottom: 15px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.result-close {
+  margin-top: 22px;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  z-index: 110;
+  animation: floatUp 4s linear forwards;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-110vh) rotate(30deg); opacity: 0; }
+}
+
+footer {
+  text-align: center;
+  color: #876879;
+  font-size: 11px;
+  margin-top: 45px;
+}
+
+@media(max-width: 500px) {
+  main { padding: 40px 15px 60px; }
+  .photo-main { height: 250px; }
+  .photo-bottom img { height: 165px; }
+  .messages-grid { gap: 8px; }
+  .message-heart { padding: 15px 5px; }
+  .letter { padding: 25px 18px; }
+  .letter p { font-size: 19px; }
+  .question-text { font-size: 28px; }
+  .modal-card { padding: 35px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<main>
+
+  <!-- ENCABEZADO -->
+  <section class="hero">
+    <div class="heart">♡</div>
+    <h1>Para Francheska</h1>
+    <div class="subtitle">Un pequeño universo dedicado a ti</div>
+
+    <p class="intro">
+      Hay personas que llegan a nuestra vida y la convierten
+      en un lugar mucho más bonito. Tú eres una de ellas.
+      🩵
+    </p>
+  </section>
+
+  <!-- CONTADOR -->
+  <section>
+    <h2 class="section-title">Nuestro tiempo juntos</h2>
+
+    <div class="card counter">
+      <div class="counter-label">Desde aquel 10 de diciembre de 2024</div>
+
+      <div class="time-grid">
+        <div class="time-box">
+          <strong id="days">0</strong>
+          <span>Días</span>
+        </div>
+        <div class="time-box">
+          <strong id="hours">00</strong>
+          <span>Horas</span>
+        </div>
+        <div class="time-box">
+          <strong id="minutes">00</strong>
+          <span>Minutos</span>
+        </div>
+        <div class="time-box">
+          <strong id="seconds">00</strong>
+          <span>Segundos</span>
+        </div>
+      </div>
+
+      <div class="music">
+        <button class="music-btn" id="musicButton">
+          ♫ Reproducir música
+        </button>
+        <div class="music-status" id="musicStatus">
+          Una canción para acompañar este momento ♡
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOS -->
+  <section>
+    <h2 class="section-title">Nuestros recuerdos ♡</h2>
+
+    <div class="photos">
+      <img class="photo-main" src="./foto1.jpg" alt="Nuestro recuerdo 1">
+
+      <div class="photo-bottom">
+        <img src="./foto2.jpg" alt="Nuestro recuerdo 2">
+        <img src="./foto3.jpg" alt="Nuestro recuerdo 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- CORAZONES CON MENSAJES -->
+  <section>
+    <h2 class="section-title">Corazones con mensajes</h2>
+
+    <div class="card">
+      <div class="messages-grid">
+        <button class="message-heart" onclick="showMessage(0)">♡<span>Mensaje 1</span></button>
+        <button class="message-heart" onclick="showMessage(1)">♡<span>Mensaje 2</span></button>
+        <button class="message-heart" onclick="showMessage(2)">♡<span>Mensaje 3</span></button>
+        <button class="message-heart" onclick="showMessage(3)">♡<span>Mensaje 4</span></button>
+        <button class="message-heart" onclick="showMessage(4)">♡<span>Mensaje 5</span></button>
+        <button class="message-heart" onclick="showMessage(5)">♡<span>Mensaje 6</span></button>
+      </div>
+
+      <div class="message-result" id="messageResult">
+        Toca un corazón y descubre un mensaje bonito 🩵
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTA SECRETA -->
+  <section>
+    <h2 class="section-title">Una carta para ti</h2>
+
+    <div class="card envelope-area">
+      <div class="envelope" id="envelope" onclick="openLetter()">
+        <div class="envelope-flap"></div>
+      </div>
+
+      <div class="envelope-text" id="envelopeText">
+        Toca el sobre para descubrir tu carta secreta 💌
+      </div>
+
+      <div class="letter" id="letter">
+        <h3>Preciosa,</h3>
+
+        <p>Muchas gracias por aparecer en mi vida y llenarme la memoria de muchos recuerdos bonitos, gracias por tus abrazos cuando más lo necesite y gracias por haber traído felicidad a mi vida, eres espectacular, y cada momento vivido contigo es algo q aprecio un montón, te adoro mucho, y espero q este detalle te alegre el día, cada que entres aquí podrás tener un recuerdo de todo el tiempo q tendríamos juntos y también los recuerdos q vivimos, y cada q necesites un apoyo puedes entrar, siempre hay mensajes bonitos para q los leas. Y también quiero q recuerdes q te amo muchísimo, y estoy demasiado orgulloso de ti preciosa, eres el amor de mi vida, te amo 🩵.</p>
+
+        <div class="letter-sign">
+          Con mucho cariño,<br>
+          para ti 🩵
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEDICATORIA FINAL -->
+  <section class="dedication">
+    <h2 class="section-title">Siempre tendrás un lugar aquí</h2>
+
+    <p>
+      No es cuánto tiempo llevamos, sino todo lo que hemos vivido en él.
+      Cada segundo a tu lado vale por mil vidas, y este contador es solo
+      la prueba de que lo mejor de mi tiempo te pertenece..
+    </p>
+
+    <div class="signature">Para ti, Francheska ♡</div>
+  </section>
+
+  <!-- BOTÓN PARA LA PREGUNTA -->
+  <section class="final-question">
+    <div class="heart">♡</div>
+    <h2>Una última preguntita...</h2>
+    <p>Hay algo que me gustaría preguntarte, preciosa.</p>
+
+    <button class="main-btn ask-btn" onclick="openQuestion()">
+      Descubrir la pregunta ♡
+    </button>
+  </section>
+
+  <footer>
+    Hecho con mucho cariño, especialmente para ti 🩵
+  </footer>
+
+</main>
+
+<!-- MODAL PREGUNTA -->
+<div class="modal" id="questionModal">
+  <div class="modal-card">
+
+    <button class="close-modal" onclick="closeQuestion()" aria-label="Cerrar">
+      ×
+    </button>
+
+    <div class="modal-heart">♡</div>
+
+    <div id="questionContent">
+      <h2 class="question-text" id="questionText">
+        ¿Me concedes el honor de volver a intentarlo contigo, preciosa?
+      </h2>
+
+      <div class="buttons-area" id="buttonsArea">
+        <button class="answer-btn yes-btn" id="yesButton" onclick="chooseYes()">
+          Sí 🩵
+        </button>
+
+        <button class="answer-btn no-btn" id="noButton" onclick="chooseNo()">
+          No
+        </button>
+      </div>
+    </div>
+
+    <div class="result-message" id="resultMessage">
+      <span class="big-heart">♡</span>
+      ¡Sabía que ibas a decir que sí, te amo muchísimo, oficialmente volvimosss 🩵!
+      <button class="main-btn result-close" onclick="closeQuestion()">
+        Cerrar ♡
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- MÚSICA -->
+<audio id="music" src="./emociones.mp3" preload="auto" loop></audio>
+
+<script>
+/* =========================
+   CONTADOR DESDE 10/12/2024
+========================= */
+
+const startDate = new Date(2024, 11, 10, 0, 0, 0);
+
+function updateCounter() {
+  const now = new Date();
+  let difference = Math.max(0, now - startDate);
+
+  const days = Math.floor(difference / 86400000);
+  difference %= 86400000;
+
+  const hours = Math.floor(difference / 3600000);
+  difference %= 3600000;
+
+  const minutes = Math.floor(difference / 60000);
+  difference %= 60000;
+
+  const seconds = Math.floor(difference / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+}
+
+updateCounter();
+setInterval(updateCounter, 1000);
+
+
+/* =========================
+   MÚSICA
+========================= */
+
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+const musicStatus = document.getElementById("musicStatus");
+
+musicButton.addEventListener("click", async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicButton.textContent = "♫ Pausar música";
+      musicStatus.textContent = "Reproduciendo una canción para ti 🩵";
+    } catch (error) {
+      musicStatus.textContent = "No se pudo reproducir. Revisa emociones.mp3";
+    }
+  } else {
+    music.pause();
+    musicButton.textContent = "♫ Reproducir música";
+    musicStatus.textContent = "La música está pausada ♡";
+  }
+});
+
+
+/* =========================
+   CORAZONES CON MENSAJES
+========================= */
+
+const messages = [
+  "Tu sonrisa tiene una manera muy especial de hacer bonito cualquier día. 🩵",
+  "Nunca olvides lo increíble que eres y todo lo que puedes lograr. ♡",
+  "Estoy muy orgulloso de ti, incluso de esas pequeñas cosas que quizás nadie nota.",
+  "Gracias por cada recuerdo bonito que guardas en mi corazón. 💌",
+  "Mereces que la vida te regale muchísimas razones para sonreír.",
+  "Si alguna vez necesitas recordar cuánto vales, vuelve a leer este mensaje. 🩵"
+];
+
+function showMessage(index) {
+  const result = document.getElementById("messageResult");
+  result.textContent = messages[index];
+
+  result.animate(
+    [
+      { opacity: 0, transform: "translateY(10px)" },
+      { opacity: 1, transform: "translateY(0)" }
+    ],
+    { duration: 500, easing: "ease-out" }
+  );
+}
+
+
+/* =========================
+   CARTA SECRETA
+========================= */
+
+let letterOpened = false;
+
+function openLetter() {
+  const envelope = document.getElementById("envelope");
+  const letter = document.getElementById("letter");
+  const text = document.getElementById("envelopeText");
+
+  letterOpened = !letterOpened;
+
+  envelope.classList.toggle("open", letterOpened);
+  letter.classList.toggle("show", letterOpened);
+
+  text.textContent = letterOpened
+    ? "Una carta escrita especialmente para ti 🩵"
+    : "Toca el sobre para descubrir tu carta secreta 💌";
+}
+
+
+/* =========================
+   PREGUNTA FINAL
+========================= */
+
+const modal = document.getElementById("questionModal");
+const questionText = document.getElementById("questionText");
+const yesButton = document.getElementById("yesButton");
+const noButton = document.getElementById("noButton");
+const buttonsArea = document.getElementById("buttonsArea");
+const questionContent = document.getElementById("questionContent");
+const resultMessage = document.getElementById("resultMessage");
+
+let noClicks = 0;
+let noScale = 1;
+let swapped = false;
+
+function openQuestion() {
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closeQuestion() {
+  modal.classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+function resetQuestion() {
+  noClicks = 0;
+  noScale = 1;
+  swapped = false;
+
+  questionText.textContent =
+    "¿Me concedes el honor de volver a intentarlo contigo, preciosa?";
+
+  noButton.textContent = "No";
+  noButton.style.transform = "scale(1)";
+  noButton.style.position = "relative";
+  noButton.style.left = "0";
+  noButton.style.top = "0";
+  noButton.style.order = "0";
+
+  yesButton.style.order = "0";
+
+  buttonsArea.style.minHeight = "95px";
+  buttonsArea.style.flexDirection = "row";
+
+  questionContent.style.display = "block";
+  resultMessage.classList.remove("show");
+}
+
+function chooseNo() {
+  noClicks++;
+
+  if (noClicks === 1) {
+    questionText.textContent = "¿Segura? 🥺";
+  } else if (noClicks === 2) {
+    questionText.textContent = "Piénsalo otra vez, preciosa 🩵";
+  } else {
+    questionText.textContent = "¿Y si lo piensas una vez más? ♡";
+  }
+
+  // Cada intento reduce progresivamente el botón
+  noScale = Math.max(0.15, noScale * 0.78);
+  noButton.style.transform = `scale(${noScale})`;
+
+  // El botón comienza a cambiar de lugar
+  if (noClicks >= 3) {
+    noButton.style.position = "relative";
+
+    const randomX = Math.random() * 100 - 50;
+    const randomY = Math.random() * 35 - 17;
+
+    noButton.style.left = randomX + "px";
+    noButton.style.top = randomY + "px";
+  }
+
+  // Después de varios intentos, intercambia posiciones
+  if (noClicks >= 7 && !swapped) {
+    swapped = true;
+
+    yesButton.style.order = "2";
+    noButton.style.order = "1";
+
+    questionText.textContent =
+      "¡Ahora hasta cambiaron de lugar! ¿Qué dices? 🩵";
+  }
+
+  // Sigue moviéndose mientras se intenta pulsar
+  if (noClicks >= 8) {
+    noButton.style.left = (Math.random() * 140 - 70) + "px";
+    noButton.style.top = (Math.random() * 60 - 30) + "px";
+  }
+}
+
+function chooseYes() {
+  questionContent.style.display = "none";
+  resultMessage.classList.add("show");
+
+  createHeartBurst(45);
+}
+
+
+/* =========================
+   CORAZONES FLOTANTES
+========================= */
+
+function createHeartBurst(amount = 15) {
+  const symbols = ["♡", "♥", "💗", "🩵", "💕"];
+
+  for (let i = 0; i < amount; i++) {
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (18 + Math.random() * 28) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    heart.style.animationDelay = Math.random() * 1.2 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7500);
+  }
+}
+
+
+/* =========================
+   PARTÍCULAS DE FONDO
+========================= */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth * devicePixelRatio;
+  canvas.height = window.innerHeight * devicePixelRatio;
+
+  canvas.style.width = window.innerWidth + "px";
+  canvas.style.height = window.innerHeight + "px";
+
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+
+  particles = [];
+
+  const count = Math.min(65, Math.floor(window.innerWidth / 12));
+
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      size: Math.random() * 2 + .5,
+      speed: Math.random() * .35 + .1,
+      opacity: Math.random() * .5 + .15
+    });
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+  particles.forEach(p => {
+    p.y -= p.speed;
+
+    if (p.y < -5) {
+      p.y = window.innerHeight + 5;
+      p.x = Math.random() * window.innerWidth;
+    }
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,190,220,${p.opacity})`;
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animateParticles);
+}
+
+window.addEventListener("resize", resizeCanvas);
+
+resizeCanvas();
+animateParticles();
+
+
+/* =========================
+   CERRAR MODAL AL TOCAR FUERA
+========================= */
+
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    closeQuestion();
+  }
+});
+
+// Escape también permite cerrar
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeQuestion();
+  }
+});
+</script>
+
+</body>
+</html>
